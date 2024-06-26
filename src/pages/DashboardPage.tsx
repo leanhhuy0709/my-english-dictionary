@@ -94,6 +94,11 @@ const DashboardPage: React.FC = () => {
     speak("Hello")
   }
 
+  const shuffle = () => {
+    let shuffleData = shuffleArray(data)
+    setData(shuffleData)
+  }
+
 
 
   if (data.length > 0)
@@ -103,6 +108,7 @@ const DashboardPage: React.FC = () => {
           <Button className='voice-button' onClick={()=>changeVoice(0)}>V1</Button>
           <Button className='voice-button' onClick={()=>changeVoice(1)}>V2</Button>
           <Button className='voice-button' onClick={()=>changeVoice(2)}>V3</Button>
+          <Button className='voice-button' onClick={shuffle}>Shuffle</Button>
       </Container>
       <Container className='voice-name-container' style={{padding: '0px',justifyContent: 'center', alignItems: 'center', display:'flex'}}>
           {name}
@@ -111,7 +117,7 @@ const DashboardPage: React.FC = () => {
         <Container className='text-board-1' style={{color: '#AF47D2'}}>
           {data[rand].word}
         </Container>
-        <Container className='text-board-1'>
+        <Container className='text-board-2'>
           {data[rand].ipa}
         </Container>
       </Container>
