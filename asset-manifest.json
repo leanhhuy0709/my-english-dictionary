@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/my-english-dictionary/static/css/main.337a6b8e.css",
-    "main.js": "/my-english-dictionary/static/js/main.6112c362.js",
+    "main.css": "/my-english-dictionary/static/css/main.743b3a08.css",
+    "main.js": "/my-english-dictionary/static/js/main.098971e8.js",
     "static/js/453.56c5ad8c.chunk.js": "/my-english-dictionary/static/js/453.56c5ad8c.chunk.js",
-    "static/js/242.3affd8ec.chunk.js": "/my-english-dictionary/static/js/242.3affd8ec.chunk.js",
+    "static/js/167.18c49c7a.chunk.js": "/my-english-dictionary/static/js/167.18c49c7a.chunk.js",
     "index.html": "/my-english-dictionary/index.html",
-    "main.337a6b8e.css.map": "/my-english-dictionary/static/css/main.337a6b8e.css.map",
-    "main.6112c362.js.map": "/my-english-dictionary/static/js/main.6112c362.js.map",
+    "main.743b3a08.css.map": "/my-english-dictionary/static/css/main.743b3a08.css.map",
+    "main.098971e8.js.map": "/my-english-dictionary/static/js/main.098971e8.js.map",
     "453.56c5ad8c.chunk.js.map": "/my-english-dictionary/static/js/453.56c5ad8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.337a6b8e.css",
-    "static/js/main.6112c362.js"
+    "static/css/main.743b3a08.css",
+    "static/js/main.098971e8.js"
   ]
 }
