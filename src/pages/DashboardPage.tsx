@@ -56,6 +56,10 @@ const DashboardPage: React.FC = () => {
     if (data.length > 0) {
       const nextWord = data[(rand - 1 + data.length) % data.length].word
       setRand((rand - 1 + data.length) % data.length)
+      if (voices[voiceIdx].name !== utterance.voice?.name)
+      {
+        utterance.voice = voices[voiceIdx];
+      }
       speak(nextWord);
     }
   }
@@ -63,6 +67,10 @@ const DashboardPage: React.FC = () => {
   const handleAgain = () => {
     if (data.length > 0) {
       const nextWord = data[(rand) % data.length].word
+      if (voices[voiceIdx].name !== utterance.voice?.name)
+      {
+        utterance.voice = voices[voiceIdx];
+      }
       speak(nextWord);
     }
   }
