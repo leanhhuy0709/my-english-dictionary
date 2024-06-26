@@ -37,6 +37,7 @@ const DashboardPage: React.FC = () => {
   const utterance = new SpeechSynthesisUtterance('');
   const voices = window.speechSynthesis.getVoices().filter((v) => v.lang === 'en-US');
   utterance.voice = voices[0];
+  console.log(voices)
 
 
   const handleNext = () => {
@@ -83,16 +84,37 @@ const DashboardPage: React.FC = () => {
     speechSynthesis.speak(utterance);
   };
 
-  const changeVoice = async (v: number) => {
-    if (v < voices.length)
+  const prevVoice = async () => {
+    let v = voiceIdx - 1;
+    if (v > 0)
     {
       utterance.voice = voices[v];
-      setName(voices[v].name);
-      setVoiceIdx(v);
     }
+    else {
+      v = voices.length - 1;
+    }
+    setName(voices[v].name);
+    setVoiceIdx(v);
 
     speak("Hello")
   }
+
+  const nextVoice = async () => {
+    let v = voiceIdx + 1;
+    if (v < voices.length)
+    {
+      utterance.voice = voices[v];
+    }
+    else {
+      v = 0;
+    }
+    setName(voices[v].name);
+    setVoiceIdx(v);
+
+    speak("Hello")
+  }
+
+
 
   const shuffle = () => {
     let shuffleData = shuffleArray(data)
@@ -105,9 +127,8 @@ const DashboardPage: React.FC = () => {
   return (
     <div className='out-side-block' style={{marginBottom: '0px'}}>
       <Container className='button-container' style={{marginTop: '10px', padding: '0px',justifyContent: 'center', alignItems: 'center', display:'flex'}}>
-          <Button className='voice-button' onClick={()=>changeVoice(0)}>V1</Button>
-          <Button className='voice-button' onClick={()=>changeVoice(1)}>V2</Button>
-          <Button className='voice-button' onClick={()=>changeVoice(2)}>V3</Button>
+          <Button className='voice-button' onClick={prevVoice}>Prev Voice</Button>
+          <Button className='voice-button' onClick={nextVoice}>Next Voice</Button>
           <Button className='voice-button' onClick={shuffle}>Shuffle</Button>
       </Container>
       <Container className='voice-name-container' style={{padding: '0px',justifyContent: 'center', alignItems: 'center', display:'flex'}}>
