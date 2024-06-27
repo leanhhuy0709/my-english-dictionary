@@ -35,6 +35,10 @@ const DashboardPage: React.FC = () => {
       {
         localStorage.setItem('voiceIdx', '0')
       }
+      else {
+        setVoiceIdx(parseInt(vIdx || '0'))
+        setName(window.speechSynthesis.getVoices()[parseInt(vIdx || '0')].name)
+      }
 
     });
   }, [data]);
