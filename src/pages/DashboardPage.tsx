@@ -42,7 +42,6 @@ const DashboardPage: React.FC = () => {
   const utterance = new SpeechSynthesisUtterance('');
   const voices = window.speechSynthesis.getVoices().filter((v) => v.lang === 'en-US');
   utterance.voice = voices[0];
-  setName(voices[0].name);
   console.log(voices)
 
 
