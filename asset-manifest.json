@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/my-english-dictionary/static/css/main.7b3578b4.css",
-    "main.js": "/my-english-dictionary/static/js/main.7e128dc4.js",
+    "main.js": "/my-english-dictionary/static/js/main.ae36436b.js",
     "static/js/453.56c5ad8c.chunk.js": "/my-english-dictionary/static/js/453.56c5ad8c.chunk.js",
     "static/js/167.18c49c7a.chunk.js": "/my-english-dictionary/static/js/167.18c49c7a.chunk.js",
     "index.html": "/my-english-dictionary/index.html",
     "main.7b3578b4.css.map": "/my-english-dictionary/static/css/main.7b3578b4.css.map",
-    "main.7e128dc4.js.map": "/my-english-dictionary/static/js/main.7e128dc4.js.map",
+    "main.ae36436b.js.map": "/my-english-dictionary/static/js/main.ae36436b.js.map",
     "453.56c5ad8c.chunk.js.map": "/my-english-dictionary/static/js/453.56c5ad8c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b3578b4.css",
-    "static/js/main.7e128dc4.js"
+    "static/js/main.ae36436b.js"
   ]
 }
