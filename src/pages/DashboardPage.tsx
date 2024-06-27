@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Container } from 'react-bootstrap';
 import './dashboard-page.css'
-import { randomInt } from 'crypto';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import axios from 'axios';
 
 interface Word {
@@ -31,12 +29,20 @@ const DashboardPage: React.FC = () => {
       // setData(shuffleData)
       setData(json.default)
       // console.log(data)
+
+      const vIdx = localStorage.getItem('voiceIdx')
+      if (vIdx != '0' && !vIdx)
+      {
+        localStorage.setItem('voiceIdx', '0')
+      }
+
     });
   }, [data]);
 
   const utterance = new SpeechSynthesisUtterance('');
   const voices = window.speechSynthesis.getVoices().filter((v) => v.lang === 'en-US');
   utterance.voice = voices[0];
+  setName(voices[0].name);
   console.log(voices)
 
 
@@ -97,6 +103,7 @@ const DashboardPage: React.FC = () => {
     setVoiceIdx(v);
 
     speak("Hello")
+    localStorage.setItem('voiceIdx', v.toString())
   }
 
   const nextVoice = async () => {
@@ -112,6 +119,8 @@ const DashboardPage: React.FC = () => {
     setVoiceIdx(v);
 
     speak("Hello")
+
+    localStorage.setItem('voiceIdx', v.toString())
   }
 
 
